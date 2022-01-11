@@ -120,7 +120,7 @@ namespace Lab03_SvoyTip
             return new Degree(newValue, newTip);
        }
        
-        public string Sort() //вывод значений
+        public string Sort() //отображение значений
         {
             return String.Format("{0} {1}", this.value, this.tip);
         }
