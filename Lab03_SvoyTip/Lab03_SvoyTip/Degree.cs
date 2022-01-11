@@ -67,23 +67,8 @@ namespace Lab03_SvoyTip
         }
 
     //сравнение
-        public static string Sravnenie(Degree instance1, Degree instance2) 
-        {
-            string outMessage = "";
-            var newValue1 = instance1.value;
-            var newValue2 = instance2.value;
-            if (newValue1 < newValue2)  // условие
-            {
-                outMessage = (newValue1 + " < " + newValue2);
-            }
-            else
-            {
-                outMessage = (newValue1 + " > " + instance2);
-            }
-            
-            //var degree = new Degree(newValue, instance.tip);
-            return outMessage;
-        }
+        
+    //вывод значения в любом типе
         public Degree Vyvod(DegreeTip newTip)
        {
             var newValue = this.value;
@@ -128,7 +113,7 @@ namespace Lab03_SvoyTip
                         break;
                 }
             }
-            else // для случаев когда другие градусы в другие градусы
+            else
             {
                 newValue = this.Vyvod(DegreeTip.C).Vyvod(newTip).value;
             }
