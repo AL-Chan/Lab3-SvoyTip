@@ -66,9 +66,6 @@ namespace Lab03_SvoyTip
             return instance * number;
         }
 
-    //сравнение
-        
-    //вывод значения в любом типе
         public Degree Vyvod(DegreeTip newTip)
        {
             var newValue = this.value;
@@ -113,14 +110,14 @@ namespace Lab03_SvoyTip
                         break;
                 }
             }
-            else
+            else // для случаев когда другие градусы в другие градусы
             {
                 newValue = this.Vyvod(DegreeTip.C).Vyvod(newTip).value;
             }
             return new Degree(newValue, newTip);
        }
        
-        public string Sort() //отображение значений
+        public string Sort() //вывод значений
         {
             return String.Format("{0} {1}", this.value, this.tip);
         }
